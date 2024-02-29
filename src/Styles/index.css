@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anaheim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+hr {
+  width: 95%;
+  margin: auto;
+  padding: 2px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #13678a;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+}
+header nav {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  transition: 0.2s ease;
+  z-index: 200;
+}
+header nav h1 {
+  color: rgb(212, 162, 0);
+  font-family: "Poppins";
+}
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  font-family: "Roboto", sans-serif;
+  color: #13678a;
+  text-decoration: none;
+}
+header .main-info {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+}
+header .main-info .main-photo {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e7e7e7;
+  box-shadow: 10px 9px 11px -14px rgba(0, 0, 0, 0.75);
+}
+header .main-info .main-photo img {
+  width: 400px;
+  height: 500px;
+  margin-top: 90px;
+  margin-right: 40px;
+}
+header .main-info .main-data {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header .main-info .main-data h2 {
+  font-family: "Poppins";
+  color: rgb(212, 162, 0);
+  font-weight: bold;
+  font-size: 35px;
+}
+header .main-info .main-data p {
+  font-weight: bold;
+  color: #13678a;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin: 1px 0;
+}
+header .main-info .main-data .info-buttons {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .main-info .main-data .info-buttons .button-CV {
+  display: block;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid #13678a;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+header .main-info .main-data .info-buttons .button-CV:hover {
+  background-color: #13678a;
+  color: white;
+}
+header .main-info .main-data .info-buttons .button-contact {
+  display: block;
+  text-decoration: none;
+  background-color: rgb(68, 68, 68);
+  color: white;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+header .main-info .main-data .info-buttons .button-contact:hover {
+  background-color: white;
+  color: rgb(212, 162, 0);
+  border-color: rgb(212, 162, 0);
+}
+header .main-info .main-data .info-social {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+header .main-info .main-data .info-social img {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease;
+}
+header .main-info .main-data .info-social img:hover {
+  transform: scale(1.2);
+}
+
+.title-about {
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-left: 30%;
+}
+
+.aboutme {
+  width: 80%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 80% 20%;
+  margin: auto;
+  margin-bottom: 400px;
+}
+.aboutme .aboutme-img {
+  width: 400px;
+  height: 500px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  box-shadow: 10px 9px 11px -14px rgba(0, 0, 0, 0.75);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.aboutme .aboutme-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.aboutme .aboutme-img::before {
+  content: "VER FOTO";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 20px;
+  background-color: rgba(37, 37, 37, 0.678);
+  transition: 0.5s ease;
+}
+.aboutme .aboutme-img:hover::before {
+  transform: translateY(-500px);
+}
+.aboutme .aboutme-item {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.aboutme .aboutme-item .item {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid #13678a;
+}
+.aboutme .aboutme-item .item .item-icon {
+  width: 30px;
+  height: 30px;
+  margin: 15px 0;
+}
+.aboutme .aboutme-item .item p:nth-child(2) {
+  font-weight: bold;
+}
+.aboutme .aboutme-item .item p {
+  font-family: "Roboto", sans-serif;
+}
+.aboutme .about-text {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 90%;
+  margin: auto;
+  margin-top: -20px;
+}
+.aboutme .about-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.title-stack {
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Poppins";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.experiencia-container {
+  width: 100%;
+  height: 240px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  background-color: rgb(17, 17, 17);
+}
+.experiencia-container img {
+  width: 100px;
+  height: 100px;
+  transition: 0.3s ease;
+}
+.experiencia-container img:hover {
+  transform: scale(1.5);
+}
+.experiencia-container img:nth-child(6) {
+  border: 3px solid white;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.title-proyectos {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+.proyectos-container {
+  width: 90%;
+  height: 450px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+.proyectos-container .proyecto-card {
+  width: 60%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  box-shadow: 10px 9px 11px -14px rgba(0, 0, 0, 0.75);
+}
+.proyectos-container .proyecto-card img {
+  width: 80%;
+  height: 250px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.proyectos-container .proyecto-card p {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 0 50px;
+  color: #fffdf8;
+}
+.proyectos-container .proyecto-card .proyecto-buttons {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+.proyectos-container .proyecto-card .proyecto-buttons .button {
+  text-decoration: none;
+  display: block;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fffdf8;
+  border: transparent;
+  color: #13678a;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  transition: 0.5s ease;
+}
+.proyectos-container .proyecto-card .proyecto-buttons .button:hover {
+  background-color: #13678a;
+  color: white;
+}
+.proyectos-container .proyecto-card:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.proyectos-container .proyecto-card:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.contacto-container {
+  width: 100%;
+  height: 500px;
+  margin-top: 100px;
+  background-image: url(../assets/program.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.contacto-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(37, 37, 37, 0.555);
+}
+.contacto-container .contacto-text {
+  width: 700px;
+  height: 50%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacto-container .contacto-text h2 {
+  font-family: "Poppins";
+  font-size: 35px;
+  color: rgb(212, 162, 0);
+  z-index: 100;
+}
+.contacto-container .contacto-text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #fffdf8;
+  padding: 1px 30px;
+  z-index: 100;
+}
+.contacto-container .form {
+  width: 400px;
+  height: 90%;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 40px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 8px 0px 0px rgba(255, 255, 255, 0.829);
+}
+.contacto-container .form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.contacto-container .form .form-group label {
+  color: #13678a;
+  font-family: "Poppins";
+  *font-weight: bold;
+}
+.contacto-container .form .form-group input[type=text] {
+  width: 350px;
+  background-color: transparent;
+  color: #000000;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d4d4d4;
+  background-color: rgba(253, 253, 253, 0.9098039216);
+  outline: none;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.contacto-container .form .consulta-title {
+  color: #13678a;
+  font-family: "Poppins";
+  margin-bottom: 10px;
+}
+.contacto-container .form .consulta {
+  width: 90%;
+  resize: none;
+  outline: none;
+  border: 1px solid #d4d4d4;
+  background-color: rgba(253, 253, 253, 0.9098039216);
+}
+.contacto-container .form .buttonEnviar {
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #13678a;
+  transition: 0.6s ease;
+  font-family: "Roboto", sans-serif;
+}
+.contacto-container .form .buttonEnviar:hover {
+  background-color: #14ba16;
+  border: 1px solid white;
+  color: white;
+}/*# sourceMappingURL=index.css.map */
